@@ -11,15 +11,15 @@ package mascotapp.entidades;
  */
 public class Mascota {
 
-    public String nombre;
-    public String apodo;
+    private String nombre;
+    private String apodo;
 
     // perro, gato, loro, conejo, carpincho
-    public String tipo;
-    public String color;
-    public int edad;
-    public boolean cola;
-    public String raza;
+    private String tipo;
+    private String color;
+    private int edad;
+    private boolean cola;
+    private String raza;
     
     //constructores
     
@@ -30,7 +30,10 @@ public class Mascota {
         
         this.nombre = nombre;
         this.apodo = apodo;
-        this.tipo = tipo;
+        
+        if(tipo.equals("Perro") || tipo.equals("Gato") || tipo.equals("Loro") || tipo.equals("Conejo") || tipo.equals("Carpincho")) {
+           this.tipo = tipo;
+        }
     
     }
 
@@ -44,5 +47,11 @@ public class Mascota {
         this.raza = raza;
     }
     
-    
+    public void setNombre(String nombre){
+        if(nombre.length() > 0){
+            this.nombre = nombre; 
+        }
+        
+        
+    }
 }

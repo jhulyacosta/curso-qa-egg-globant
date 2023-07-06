@@ -24,9 +24,8 @@ public class MascotApp {
         
         Mascota mascotaUno = new Mascota("Fernando Chiquito", leer.next(), "Perro");
         
+        mascotaUno.setNombre("Pepe Chiquito");
         
-        
-        System.out.println(mascotaUno.apodo+" "+mascotaUno.edad+" "+mascotaUno.tipo);
         
         
         
