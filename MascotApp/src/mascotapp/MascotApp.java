@@ -22,15 +22,9 @@ public class MascotApp {
 
         Scanner leer = new Scanner(System.in);
         
-        Mascota mascotaUno = new Mascota();
+        Mascota mascotaUno = new Mascota("Fernando Chiquito", leer.next(), "Perro");
         
-        mascotaUno.apodo = "Chiquito";
-        mascotaUno.nombre = leer.next();
-        mascotaUno.tipo = "Perro";
-        mascotaUno.edad = 14;
-        mascotaUno.raza = "Beagle";
-        mascotaUno.cola = true;
-        mascotaUno.color = "Tricolor";
+        
         
         System.out.println(mascotaUno.apodo+" "+mascotaUno.edad+" "+mascotaUno.tipo);
         
