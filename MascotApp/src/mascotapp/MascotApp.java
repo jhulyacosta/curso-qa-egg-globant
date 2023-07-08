@@ -22,9 +22,11 @@ public class MascotApp {
 
         Scanner leer = new Scanner(System.in);
         
-        Mascota mascotaUno = new Mascota("Fernando Chiquito", leer.next(), "Perro");
+        Mascota mascotaUno = new Mascota("Fernando Chiquito", "chiquito", "Perro");
         
         mascotaUno.setNombre("Pepe Chiquito");
+        
+        System.out.println(mascotaUno.toString());
         
         
         
