@@ -20,10 +20,12 @@ public class Mascota {
     private int edad;
     private boolean cola;
     private String raza;
+    private int energia;
     
     //constructores
     
     public Mascota() {
+        energia = 1000;
     }
     
     public Mascota(String nombre, String apodo, String tipo) {
@@ -34,7 +36,8 @@ public class Mascota {
         if(tipo.equals("Perro") || tipo.equals("Gato") || tipo.equals("Loro") || tipo.equals("Conejo") || tipo.equals("Carpincho")) {
            this.tipo = tipo;
         }
-    
+        
+        this.energia = 1000;
     }
 
     public Mascota(String nombre, String apodo, String tipo, String color, int edad, boolean cola, String raza) {
@@ -45,6 +48,7 @@ public class Mascota {
         this.edad = edad;
         this.cola = cola;
         this.raza = raza;
+        this.energia = 1000;
     }
     
     public void setNombre(String nombre){
@@ -107,12 +111,23 @@ public class Mascota {
         return raza;
     }
     
+    public int pasear(int energiaRestar){
+        
+        energia = energia - energiaRestar;
+        
+        // otra sentencia que es idéntica es la siguiente:
+        // energia -= energiaRestar  (esto es igual a: energia = energia - energiaRestar)
+   
+        return energia;
+    }
+    
     //toString
 
     @Override
     public String toString() {
-        return "Mascota{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + ", color=" + color + ", edad=" + edad + ", cola=" + cola + ", raza=" + raza + '}';
+        return "Mascota{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + ", color=" + color + ", edad=" + edad + ", cola=" + cola + ", raza=" + raza + ", energia=" + energia + '}';
     }
-    
+
+   
     
 }

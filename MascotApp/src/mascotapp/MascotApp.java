@@ -26,11 +26,10 @@ public class MascotApp {
         
         mascotaUno.setNombre("Pepe Chiquito");
         
+        mascotaUno.pasear(100);
+        
         System.out.println(mascotaUno.toString());
-        
-        
-        
-        
+
 //    public String nombre;
 //    public String apodo;
 //
