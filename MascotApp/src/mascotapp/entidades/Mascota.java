@@ -111,12 +111,37 @@ public class Mascota {
         return raza;
     }
     
+    /**
+     * Función destinada a pasear
+     * @param energiaRestar
+     * @return energia
+     */
+    
     public int pasear(int energiaRestar){
         
         energia = energia - energiaRestar;
         
         // otra sentencia que es idéntica es la siguiente:
         // energia -= energiaRestar  (esto es igual a: energia = energia - energiaRestar)
+   
+        return energia;
+    }
+    
+    /** 
+     * 
+     * Función destinada para pasear por vueltas
+     * 
+     * @param energiaRestar
+     * @param vueltas
+     * @return energia 
+     */
+    
+    public int pasear(int energiaRestar, int vueltas){
+        
+        for (int i = 0; i < vueltas; i++) {
+          
+            energia -= energiaRestar;
+        }
    
         return energia;
     }

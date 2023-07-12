@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 package mascotapp;
-
-import java.util.Scanner;
 import mascotapp.entidades.Mascota;
+import mascotapp.servicios.ServicioMascota;
 
 /**
  *
@@ -20,25 +19,16 @@ public class MascotApp {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        Scanner leer = new Scanner(System.in);
+       ServicioMascota sm = new ServicioMascota();
+       
+       Mascota mascotaUno = sm.crearMascota();
         
-        Mascota mascotaUno = new Mascota("Fernando Chiquito", "chiquito", "Perro");
-        
-        mascotaUno.setNombre("Pepe Chiquito");
-        
-        mascotaUno.pasear(100);
-        
-        System.out.println(mascotaUno.toString());
+       System.out.println(mascotaUno.toString());
+       
+       mascostaUno = null;
+                
 
-//    public String nombre;
-//    public String apodo;
-//
-//    // perro, gato, loro, conejo, carpincho
-//    public String tipo;
-//    public String color;
-//    public int edad;
-//    public boolean cola;
-//    public String raza;
+
 }
 
 }
